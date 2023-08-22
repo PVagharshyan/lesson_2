@@ -130,7 +130,7 @@ bool Vector<T>::operator==(const Vector<T>& vector) const{
 }
 
 template <class T>
-T Vector<T>::operator[](int index) const{
+T& Vector<T>::operator[](int index) const{
     if (index < 0) throw std::runtime_error("Error: Out of range!");
     return m_arr[index];
 }
@@ -154,7 +154,7 @@ Vector<T>& Vector<T>::operator=(const Vector& vector) {
 }
 
 template <class T>
-T Vector<T>::at(int index) const {
+T& Vector<T>::at(int index) const {
     if (index < 0 || index >= m_size) throw std::runtime_error("Error: Out of range!");
     return m_arr[index];
 }
