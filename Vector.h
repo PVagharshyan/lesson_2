@@ -14,9 +14,9 @@ public:
     T pop_back();
     int size() const; 
     bool operator==(const Vector<T>&) const;
-    T operator[](int) const;
+    T& operator[](int) const;
     Vector<T>& operator=(const Vector&);
-    T at(int) const;
+    T& at(int) const;
     std::string repr() const;
     ~Vector();
 private:
