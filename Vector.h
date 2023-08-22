@@ -27,7 +27,7 @@ private:
 
 template <class T>
 Vector<T>::Vector() 
-    :m_size{0}, m_capacity{4}, m_arr{new T[m_capacity]{0}}
+    :m_size{0}, m_capacity{4}, m_arr{new T[m_capacity]}
 {}
 
 template <class T>
@@ -36,7 +36,7 @@ Vector<T>::Vector(int size)
     if (size < 0) throw std::runtime_error("Error");
     m_capacity = size*2;
     m_size = size; 
-    m_arr = new T[m_capacity]{0};
+    m_arr = new T[m_capacity];
 }
 
 template <class T>
